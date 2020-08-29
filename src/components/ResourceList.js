@@ -11,7 +11,7 @@ const [ resources , setResources] = useState([]);
   }
   useEffect(()=>{
     fetchResource(resource)
-  }, [])
+  }, [resource ])
 
   return (
     <div>
