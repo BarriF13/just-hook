@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import ResourceList from './ResourceList'
 
 const App =()=> {
 // array destructuring --resource is like state, setRecourse is like setState-resource = 'post' or default state 
@@ -10,7 +11,7 @@ const [resource , setResource ] = useState('posts');
           <button onClick={()=>setResource('Posts')}>Posts</button>
           <button onClick={()=>setResource('Todos')}>Todos</button>
         </div>
-        {resource}
+        <ResourceList resource = { resource}/>
       </div>
     )
   
