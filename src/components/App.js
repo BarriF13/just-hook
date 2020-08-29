@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
 const App =()=> {
-
-const [resource , setResource ] = useState('posts')
+// array destructuring --resource is like state, setRecourse is like setState-resource = 'post' or default state 
+const [resource , setResource ] = useState('posts');
  
     return (
       <div className="ui container">
