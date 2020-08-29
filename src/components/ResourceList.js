@@ -4,7 +4,7 @@ import axios from 'axios';
 const ResourceList = ({ resource }) => {
   const [resources, setResources] = useState([]);
 
-  
+
   //use IIFE function inside useEffect  to call the api is possible too.
   useEffect(
     () => {
@@ -18,9 +18,9 @@ const ResourceList = ({ resource }) => {
   );
 
   return (
-    <div>
-      {resources.length}
-    </div>
+    <ul>
+      {resources.map( record => <li key={record.id}>{record.title}</li>)}
+    </ul>
   )
 }
 
