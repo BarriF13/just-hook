@@ -1,6 +1,8 @@
 ## React app for learning hooks
 #
-
+### Tech Stack
+* Api Json placeholder
+* React ( Hooks)
 #
 ### `npm start`
 
