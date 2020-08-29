@@ -1,24 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
+import useResources from './useResources';
 
-//-----this component is reusable and has no tie to any other place in our app 
-const useResources = ( resource ) => {
-  const [resources, setResources] = useState([]);
-
-  //use IIFE function inside useEffect  to call the api is possible too.
-  useEffect(
-    () => {
-      (async resource => {
-        const response = await axios.get(`https://jsonplaceholder.typicode.com/${resource}`);
-
-        setResources(response.data)
-      })(resource)
-    },
-    [resource]
-  );
-    return resources;
-}
-//------------------------
 const ResourceList = ({ resource }) => {
   const resources = useResources(resource)
 
